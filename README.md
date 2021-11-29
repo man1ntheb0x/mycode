@@ -1,7 +1,6 @@
 # mycode (Project Title)
 
-One Paragraph of your project description goes here. Describe what you're trying to do.
-What is the purpose of putting up this repo?
+The purpose of this repo is to learn version control and API design.
 
 ## Getting Started
 
@@ -20,5 +19,5 @@ What things are needed to install the software and how to install them. For now,
 
 ## Authors
 
-* **Your Name** - *Initial work* - [YourWebsite](https://example.com/)
+* **Dan Jahnke** - *Initial work* - [YourWebsite](https://example.com/)
 
