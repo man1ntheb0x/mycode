@@ -23,10 +23,10 @@ def main():
     startdate = input("Enter a start date in the following format: YYYY-MM-DD: ")
 
     ## ask for the end date
-    enddate = input("Enter an end date in the following format: YYYY-MM-DD: ")
+    enddate = input("Enter an end date in the following format(MAX IS 7 DAYS): YYYY-MM-DD: ")
 
     # make a request with the request library
-    neowrequest = requests.get(NEOURL + "start_date=" + startdate + "end_date="+ enddate + "&" + nasacreds)
+    neowrequest = requests.get(NEOURL + "start_date=" + startdate + "&" + "end_date="+ enddate + "&" + nasacreds)
 
     # strip off json attachment from our response
     neodata = neowrequest.json()
@@ -50,4 +50,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
