@@ -19,10 +19,12 @@ def main():
 
         ## Decode the response
         got_dj = gotresp.json()
-        pprint.pprint(got_dj)
+
+        ## Print the character name
+        print(f"Character name: {got_dj['name']}")
 
         ## Sent the HTTPS GET to the API of Ice and fire resource to get allegiances.
-        print(f"\n\n{got_dj['name']} is aligned with the following Houses:")
+        print(f"\nAligned with the following Houses:")
         if got_dj['allegiances']:
             for allegiance in got_dj['allegiances']:
                 ## Check for each allegiance returned for this character
@@ -36,7 +38,7 @@ def main():
 
         ## Send the HTTPS GET to the API of Ice and Fire Books resource, then check if the char appears as a secondary character.
         if got_dj['books']:
-            print(f"\n\n{got_dj['name']} appears in the following books:")
+            print(f"\nAppears in the following books:")
             for book in got_dj['books']:
                 ## Check for each book returned for this character
                 got_bookToLookup = requests.get(book)
@@ -46,7 +48,7 @@ def main():
                 print("  " + got_book['name'])
 
         ## Send the HTTPS GET to the API of Ice and Fire Books resource, then check if the char appears as a POV character.
-        print(f"\n\n{got_dj['name']} is a POV character in the following books:")
+        print("\nPOV character in the following books:")
         if got_dj['povBooks']:
             for book in got_dj['povBooks']:
                 ## Check for each book returned for this character
